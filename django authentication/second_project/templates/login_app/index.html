@@ -1,0 +1,12 @@
+{% extends "login_app/base.html" %}
+{% block body %}
+<h2>This text is index page</h2>
+
+<p>Username:{{basic_form.username}}</p>
+<p>Email:{{basic_form.email}}</p>
+<p><a href="{{more_info_form.facebook_id}}">Facebook</a></p>
+<img src="/media/{{more_info_form.profile_pic}}" width="100px"/>
+
+
+{% endblock body %}
+

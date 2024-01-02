@@ -1,0 +1,14 @@
+{% extends "login_app/base.html" %}
+{% block body %}
+<h3>Log in page</h3>
+<form action="{% url "login_app:user_login" %}" method='POST' >
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" class="form-control" placeholder="Enter Username" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
+    <br>
+    <input type="submit" name="submit" value="submit">
+    
+</form>
+{% endblock body %}
